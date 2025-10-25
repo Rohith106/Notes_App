@@ -9,7 +9,7 @@
 ## 🚀 Features
 - Create, read, update, and delete notes
 - Clean, minimal backend structure (single–file server logic)
-- MySQL persistence (replaced previous MongoDB implementation)
+- MongoDB backend
 - RESTful API under `/api/notes`
 - TailwindCSS styled UI
 - Environment-based configuration
@@ -19,7 +19,7 @@
 |-------|------|
 | Frontend | React, Vite, Axios, TailwindCSS |
 | Backend | Node.js, Express |
-| Database | MySQL (mysql2 driver) |
+| Database | MongoDb |
 | Tooling | Nodemon, dotenv |
 
 ## 📂 Project Structure
@@ -30,7 +30,7 @@ backend/
 		server.js            # Express app (CORS, routes)
 		notesRoutes.js       # Notes routes
 		notesController.js   # Controllers (request handling)
-		notesModel.js        # Raw MySQL queries
+		notesModel.js       
 frontend/
 	package.json
 	src/
@@ -44,10 +44,8 @@ frontend/
 Create `backend/.env`:
 ```
 PORT=5001
-MYSQL_HOST=localhost
-MYSQL_USER=your_user
-MYSQL_PASSWORD=your_password
-MYSQL_DATABASE=notes_app
+MONGODB_URI
+MONGO_DB_KEY
 
 ```
 If you are not using rate limiting, you can remove the Upstash variables and comment out related code.
