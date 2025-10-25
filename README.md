@@ -1,6 +1,6 @@
 <div align="center">
 	<h1>🗒️ Notes Management Web App</h1>
-	<p>Full-stack notes application with a React + Vite frontend and an Express backend using MySQL (migrated from MongoDB) and optional Upstash rate limiting.</p>
+	<p>Full-stack notes application with a React + Vite frontend and an Express backend using MongoDB.</p>
 	<img src="frontend/public/vite.svg" alt="Logo" width="70" />
 </div>
 
