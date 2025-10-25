@@ -11,7 +11,6 @@
 - Clean, minimal backend structure (single–file server logic)
 - MySQL persistence (replaced previous MongoDB implementation)
 - RESTful API under `/api/notes`
-- Rate limiting via Upstash Redis (optional – easily disabled)
 - TailwindCSS styled UI
 - Environment-based configuration
 
@@ -21,7 +20,6 @@
 | Frontend | React, Vite, Axios, TailwindCSS |
 | Backend | Node.js, Express |
 | Database | MySQL (mysql2 driver) |
-| Rate Limiting | @upstash/ratelimit + @upstash/redis |
 | Tooling | Nodemon, dotenv |
 
 ## 📂 Project Structure
@@ -29,7 +27,7 @@
 backend/
 	package.json
 	src/
-		server.js            # Express app (CORS, rate limiting, routes)
+		server.js            # Express app (CORS, routes)
 		notesRoutes.js       # Notes routes
 		notesController.js   # Controllers (request handling)
 		notesModel.js        # Raw MySQL queries
@@ -50,8 +48,7 @@ MYSQL_HOST=localhost
 MYSQL_USER=your_user
 MYSQL_PASSWORD=your_password
 MYSQL_DATABASE=notes_app
-UPSTASH_REDIS_REST_URL=your_optional_upstash_url
-UPSTASH_REDIS_REST_TOKEN=your_optional_upstash_token
+
 ```
 If you are not using rate limiting, you can remove the Upstash variables and comment out related code.
 
